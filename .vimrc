@@ -42,13 +42,21 @@
 " :%s/find/replace
 " :%s/find/replace/g - global
 " :2,20s/find/replace/g - replace only lines 2 - 20
+" :%s/<Ctrl-V><Ctrl-M>/<Ctrl-V><Ctrl-M>/g - fix files that are all on one line
 " 
 " split
 " :split or :vsplit
 " ctrl-w-movement - move between windows
 " ctrl-w-minus - reduce size of current window
 " ctrl-w-plus - increase size of current window
-
+"
+" copy to windows clipboard from cygwin
+" '<,'>w !cat > /dev/clipboard
+"
+" fold
+" za - toggle fold
+" zM - fold everything
+" zR - unfold everything
 " ********** configuration **************
 
 "general
@@ -83,3 +91,9 @@ set shiftwidth=2
 "usage - :e **/partialFileName <tab>
 set wildmode=longest:full
 set wildmenu
+
+"folding
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=1
