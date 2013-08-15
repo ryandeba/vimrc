@@ -60,7 +60,6 @@
 " ********** configuration **************
 
 "general
-"cd /var/www "working directory
 set ignorecase
 set history=100
 set so=7 "autoscroll 7 lines from the top and bottom
@@ -72,14 +71,8 @@ set si "smart indent
 color koehler
 syntax on
 set number "turn line numbers on
-"set guifont=Ubuntu_Mono:h12:cANSI
-"set guioptions=mr
 set nowrap "don't wrap lines
 set list "show whitespace
-"set cursorline "highlight cursor line
-"hi cursorline guibg=#333333
-"set cursorcolumn "highlight cursor column
-"hi cursorcolumn guibg=#333333
 
 "indentation
 set tabstop=2 "tabs
@@ -97,3 +90,6 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=1
+
+" mappings
+vnoremap <F5> :w !cat > /dev/clipboard<CR>
