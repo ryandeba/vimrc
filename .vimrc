@@ -72,7 +72,7 @@ color koehler
 syntax on
 set number "turn line numbers on
 set nowrap "don't wrap lines
-set list "show whitespace
+set list listchars=tab:->,eol:$
 
 "indentation
 set tabstop=2 "tabs
@@ -92,4 +92,4 @@ set nofoldenable
 set foldlevel=1
 
 " mappings
-vnoremap <F5> :w !cat > /dev/clipboard<CR>
+noremap <F2> :lvimgrep  **/*<Left><Left><Left><Left><Left>
