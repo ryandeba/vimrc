@@ -93,3 +93,4 @@ set foldlevel=1
 
 " mappings
 noremap <F2> :lvimgrep  **/*<Left><Left><Left><Left><Left>
+imap jk <Esc>
