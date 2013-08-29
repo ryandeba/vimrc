@@ -1,11 +1,8 @@
-execute pathogen#infect()
-
 "general
 set ignorecase
 set history=100
 set so=7 "autoscroll 7 lines from the top and bottom
 set ruler
-set si "smart indent
 
 "appearance
 set t_Co=256
@@ -26,7 +23,6 @@ set smartindent
 set shiftwidth=2
 
 "autocomplete filenames to the longest possible name, show additional matches in status bar
-"usage - :e **/partialFileName <tab>
 set wildmode=longest:full
 set wildmenu
 
