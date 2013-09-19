@@ -3,13 +3,15 @@ set ignorecase
 set history=100
 set so=7 "autoscroll 7 lines from the top and bottom
 set ruler
+set backspace=2
+set noswapfile
 
 "appearance
 set t_Co=256
 color koehler
 syntax on
-set number "turn line numbers on
-set nowrap "don't wrap lines
+set number
+set nowrap
 set list listchars=tab:->,eol:$
 set cursorline
 set cursorcolumn
@@ -35,3 +37,22 @@ set foldlevel=1
 " mappings
 noremap <F2> :lvimgrep  **/*<Left><Left><Left><Left><Left>
 imap jk <Esc>
+
+fu! SaveSession()
+	execute 'call mkdir(~/.vim)'
+	execute 'mksession! ~/.vim/session.vim'
+endfunction
+
+fu! RestoreSession()
+execute 'so ~/.vim/session.vim'
+if bufexists(1)
+	for l in range(1, bufrn('$'))
+		if bufwinnr(l) == -1
+			exec 'sbuffer ' . l
+		endif
+	endfor
+endif
+endfunction
+
+autocmd VimLeave * call SaveSession()
+autocmd VimEnter * call RestoreSession()
