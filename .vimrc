@@ -10,6 +10,7 @@ set noswapfile
 set t_Co=256
 color koehler
 syntax on
+set synmaxcol=160
 set number
 set nowrap
 set list listchars=tab:->,eol:$
