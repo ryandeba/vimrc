@@ -5,6 +5,7 @@ set so=7 "autoscroll 7 lines from the top and bottom
 set ruler
 set backspace=2
 set noswapfile
+set laststatus=2
 
 "appearance
 set t_Co=256
@@ -44,16 +45,4 @@ fu! SaveSession()
 	execute 'mksession! ~/.vim/session.vim'
 endfunction
 
-fu! RestoreSession()
-execute 'so ~/.vim/session.vim'
-if bufexists(1)
-	for l in range(1, bufrn('$'))
-		if bufwinnr(l) == -1
-			exec 'sbuffer ' . l
-		endif
-	endfor
-endif
-endfunction
-
 autocmd VimLeave * call SaveSession()
-autocmd VimEnter * call RestoreSession()
