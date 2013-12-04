@@ -13,6 +13,7 @@ color koehler
 syntax on
 set synmaxcol=160
 set number
+set relativenumber
 set nowrap
 set list listchars=tab:->,eol:$
 set cursorline
