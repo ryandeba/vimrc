@@ -40,6 +40,11 @@ set foldlevel=1
 noremap <F2> :lvimgrep  **/*<Left><Left><Left><Left><Left>
 imap jk <Esc>
 
+let mapleader = " "
+map <Leader>e :e **/
+map <Leader>t :tabnew<Return>
+map <Leader>w :w<Return>
+
 fu! SaveSession()
 	execute 'call mkdir(~/.vim)'
 	execute 'mksession! ~/.vim/session.vim'
