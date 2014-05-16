@@ -38,7 +38,6 @@ set nofoldenable
 set foldlevel=1
 
 " mappings
-noremap <F2> :lgrep -r -i --include * 
 imap jk <Esc>
 
 let mapleader = " "
@@ -46,3 +45,4 @@ map <Leader>e :e **/
 map <Leader>E :E<CR>
 map <Leader>t :tabnew<Return>
 map <Leader>w :w<Return>
+noremap <Leader>f :lgrep -r -i 
