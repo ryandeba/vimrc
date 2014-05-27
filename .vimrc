@@ -20,6 +20,9 @@ set cursorline
 set cursorcolumn
 hi CursorLine cterm=NONE ctermbg=236
 hi CursorColumn cterm=NONE ctermbg=236
+hi Normal ctermbg=256
+set hlsearch
+set mps+=<:>
 
 "indentation
 set tabstop=2 "tabs
@@ -38,11 +41,16 @@ set nofoldenable
 set foldlevel=1
 
 " mappings
-noremap <F2> :lgrep -r -i --include * 
 imap jk <Esc>
 
 let mapleader = " "
+map <Leader>f :lgrep -r -i --include * 
 map <Leader>e :e **/
 map <Leader>E :E<CR>
 map <Leader>t :tabnew<Return>
 map <Leader>w :w<Return>
+map <Leader>lo :lopen<Return>
+map <Leader>lc :lclose<Return>
+map <Leader>ln :lnext<Return>
+map <Leader>lp :lprevious<Return>
+set pastetoggle=<F12>
