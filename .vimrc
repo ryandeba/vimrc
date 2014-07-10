@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 "general
 set ignorecase
 set history=100
@@ -60,3 +62,5 @@ map <Leader>lp :lprevious<Return>
 set pastetoggle=<F12>
 
 " ADD CUSTOM CHANGES HERE FOR EACH BRANCH
+colorscheme wombat256mod
+hi Normal ctermbg=256
