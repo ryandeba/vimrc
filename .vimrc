@@ -6,6 +6,7 @@ set ruler
 set backspace=2
 set noswapfile
 set laststatus=2
+set hidden
 
 "appearance
 set t_Co=256
