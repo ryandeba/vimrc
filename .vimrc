@@ -54,3 +54,5 @@ map <Leader>lc :lclose<Return>
 map <Leader>ln :lnext<Return>
 map <Leader>lp :lprevious<Return>
 set pastetoggle=<F12>
+
+" ADD CUSTOM CHANGES HERE FOR EACH BRANCH
