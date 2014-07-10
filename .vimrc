@@ -12,7 +12,7 @@ set hidden
 set t_Co=256
 color koehler
 syntax on
-set synmaxcol=300
+set synmaxcol=500
 set number
 set relativenumber
 set nowrap
@@ -26,10 +26,13 @@ set hlsearch
 set mps+=<:>
 
 "indentation
-set tabstop=2 "tabs
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set autoindent
 set smartindent
-set shiftwidth=2
+set smarttab
+set expandtab
 
 "autocomplete filenames to the longest possible name, show additional matches in status bar
 set wildmode=longest:full
