@@ -50,7 +50,7 @@ set foldlevel=1
 imap jk <Esc>
 
 let mapleader = " "
-map <Leader>f :lgrep -r -i --include * 
+map <Leader>f :lgrep -r -i 
 map <Leader>e :e **/
 map <Leader>E :E<CR>
 map <Leader>t :tabnew<Return>
